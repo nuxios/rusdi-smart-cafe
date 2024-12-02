@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Espresso",
+        "category": "Beverage",
+        "price": 15000
+    },
+    {
+        "name": "Americano",
+        "category": "Beverage",
+        "price": 20000
+    },
+    {
+        "name": "Cappuccino",
+        "category": "Beverage",
+        "price": 25000
+    },
+    {
+        "name": "Caffè Latte",
+        "category": "Beverage",
+        "price": 25000
+    },
+    {
+        "name": "Caramel Macchiato",
+        "category": "Beverage",
+        "price": 30000
+    },
+    {
+        "name": "Es Kopi Susu Gula Aren",
+        "category": "Beverage",
+        "price": 18000
+    },
+    {
+        "name": "Matcha Latte",
+        "category": "Beverage",
+        "price": 28000
+    },
+    {
+        "name": "Red Velvet Latte",
+        "category": "Beverage",
+        "price": 30000
+    },
+    {
+        "name": "Croissant",
+        "category": "Snack",
+        "price": 20000
+    },
+    {
+        "name": "Cinnamon Roll",
+        "category": "Snack",
+        "price": 22000
+    },
+    {
+        "name": "French Fries",
+        "category": "Snack",
+        "price": 15000
+    },
+    {
+        "name": "Chicken Wings (Spicy)",
+        "category": "Snack",
+        "price": 35000
+    },
+    {
+        "name": "Spaghetti Carbonara",
+        "category": "Main Course",
+        "price": 40000
+    },
+    {
+        "name": "Nasi Ayam Sambal Matah",
+        "category": "Main Course",
+        "price": 45000
+    },
+    {
+        "name": "Cheesecake",
+        "category": "Dessert",
+        "price": 30000
+    },
+    {
+        "name": "Chocolate Lava Cake",
+        "category": "Dessert",
+        "price": 35000
+    }
+]

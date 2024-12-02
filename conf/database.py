@@ -47,5 +47,8 @@ def insert_recommendation(item_id):
     response = supabase.table("recommendations").insert(data).execute()
     print(response)
 
-
-DB_connect()
+def show_item():
+     supabase = DB_connect()
+     response = supabase.table("items").select("*").execute()
+     
+     return response.data
