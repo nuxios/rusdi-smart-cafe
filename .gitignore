@@ -5,6 +5,7 @@ __pycache__/
 
 #json
 conf.json
+conf.*
 
 # C extensions
 *.so

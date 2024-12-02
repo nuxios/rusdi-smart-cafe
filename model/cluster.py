@@ -10,7 +10,7 @@ with open("conf.json", "r") as config_file:
 api_key = config["GROQ_KEY"]
 assistant_content = assist_data["assistant"]["content"] 
 
-def cluster_model(model_name, messages, temperature, max_tokens, top_p, stream, stop):
+def cluster_model(model_names, messages, temperature, max_tokens, top_p, stream, stop):
     pass
 
 client = Groq(api_key=api_key)
