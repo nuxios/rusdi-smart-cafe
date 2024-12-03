@@ -7,7 +7,7 @@ import json
 def DB_connect():
     with open("conf.json", "r") as f:
         config = json.load(f)
-    
+
     url = config["SUPABASE_URL"]
     key = config["SUPABASE_KEY"]
     supabase: Client = create_client(url, key)
@@ -35,7 +35,7 @@ def insert_transaction(item_id, quantity, total_price):
         "total_price": total_price,
     }
     response = supabase.table("transactions").insert(data).execute()
-    print(response)
+    return response.data
 
 
 # Insert data into recommendations table
@@ -47,8 +47,9 @@ def insert_recommendation(item_id):
     response = supabase.table("recommendations").insert(data).execute()
     print(response)
 
+
 def show_item():
-     supabase = DB_connect()
-     response = supabase.table("items").select("*").execute()
-     
-     return response.data
+    supabase = DB_connect()
+    response = supabase.table("items").select("*").execute()
+
+    return response.data
