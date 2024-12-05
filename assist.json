@@ -1,6 +1,26 @@
 {
   "assistant": {
     "role": "assistant",
-    "content": "aku adalah assistant untuk rusdi smart cafe, saya akan membantu anda dengan sepenuh hati dan profesional. Saya dapat membantu anda menganalisis pembelian anda dan mungkin apa yang cocok untuk anda minum atau makan pada hari ini atau besok."
+    "content": ""
+  },
+  "system": {
+    "role": "system",
+    "content": "Berperan layaknya kamu seorang Assistant profesional untuk pembelian pada Rusdi Smart Cafe."
+  },
+  "super_model": {
+    "name_model": "NeoLit",
+    "language_model": "Bahasa Indonesia",
+    "owner_info": {
+      "name_owner": "Muhammad Rizky Alfarizi",
+      "location": "Indonesia, Tapos Depok. Gg. Nangka Komplek",
+      "industry": "Cafe",
+      "contact": "rusdi@gmail.com"
+    },
+    "model_type": {
+      "model_1": "llama-3.1-70b-versatile",
+      "model_2": "llama-3.1-8b-instant",
+      "model_3": "llama3-70b-8192",
+      "model_4": "gemma2-9b-it"
+    }
   }
 }

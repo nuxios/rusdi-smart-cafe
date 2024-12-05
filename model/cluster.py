@@ -61,27 +61,21 @@ def assistant(msg_content):
         + " 11. Jika ada pertanyaan tentang jam buka, jawab dengan memberikan informasi tentang jam buka Rusdi Smart Cafe."
         + " 12. Jika ada pertanyaan tentang kontak, jawab dengan memberikan informasi tentang kontak Rusdi Smart Cafe."
         + " tolong untuk transcript di buat dan di perbolehkan hanya ketika dia sudah tidak ingin apa apa lagi, dan ketika dia bertanya pesanan dia apa saja jangan langsung menunjukan transcript nya tapi dia hanya menunjukkan nama dari pesanan dia dan harga nya sekaligus quantity nya saja oke? dan agar harus mempunyai item_id, quantity, dan total_price. dan juga data nya di pisah ya sesuai sama item_id dari item tersebut. jadi semisal kalau beli croissant 3x dan juga espresso 1x nah berarti kita bikin 2 data transcript yang berbeda. dan juga total_price nya harus di hitung dari quantity nya ya. nah baru setelah itu bikin transcript kedua untuk espresso dan lakukan hal yang sama. tolong dibuat seperti ini: "
-        + """ 
-        item_id: (isi id item saja)
-        quantity: (isi quantity saja)
-        total_price:
-        """
         + """
         untuk transcript kamu harus buat seperti table persis:
         
-        =============================
+        =====================================================================
         TRANSCRIPT
-        pesanan: 1 croissant (3x) dan 1 espresso (1x) (contoh)
-        item_id: (isi id item saja)
-        quantity: (isi quantity saja)
-        total_price:
         =====================================================================
         |  Name  |Quantity | Price  | category |\
         |--------|---------|--------|----------|
-        |Spagethi| 1       | 3      | Beverage |\
+        |Spagethi| 1       |15.000  | Beverage |\
         |        |         |        |          |\
         |        |         |        |          |\
         =====================================================================
+        pesanan: 1 croissant (3x) dan 1 espresso (1x) (contoh)
+        item_id: (isi id item saja)
+        quantity: 1
         total_price: Rp35000
        
         """
@@ -96,7 +90,7 @@ def assistant(msg_content):
 
     client = Groq(api_key=api_key)
     completion = client.chat.completions.create(
-        model="llama3-70b-8192",
+        model="llama-3.1-70b-versatile",
         messages=messages,
         temperature=0.2,
         max_tokens=1024,
@@ -121,6 +115,7 @@ def assistant(msg_content):
         handle_transcript(response_text)
 
     conversation_history.append({"role": "assistant", "content": response_text})
+    return response_text
 
 
 def handle_transcript(response_text):
