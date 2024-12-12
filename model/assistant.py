@@ -29,7 +29,7 @@ def process_model(msg_content):
     completion = client.chat.completions.create(
         model=model_type,
         messages=messages,
-        temperature=0.3,
+        temperature=0.1,
         max_tokens=8000,
         top_p=1,
         stream=True,
