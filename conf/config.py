@@ -19,7 +19,7 @@ jakarta_now = utc_now.astimezone(jakarta_tz)
 menu_items = menu_cafe()
 menu_text = "\n".join(
     [
-        f"- {item['id']} - {item['name']} ({item['category']}): Rp{item['price']}"
+        f"- id:{item['id']}- stock: {item['stock']} - {item['name']} - ({item['category']}): Rp{item['price']}"
         for item in menu_items
     ]
 )
@@ -77,6 +77,8 @@ Misc Rules:
 12.) tidak boleh menggunakan table karena ia akan di tampilkan di terminal dan tidak mendukung table.
 13.) tidak boleh menggunakan list karena ia akan di tampilkan di terminal dan tidak mendukung list.
 14.) wajib memecah transcript menjadi 2 atau lebih sesuai sama apa yang dia beli di menu dan sudah di bayar. contoh pelanggan membeli 2 cheesecake dan 1 croissant maka kamu harus membuat 2 transcript yang berbeda atau kamu bisa satukan saja tapi dengan nilai name, quantity, item_id yang berbeda. sisanya boleh di satukan.
+15.) Jangan menunjukkan ID item menu ketika kamu sedang memberikan menu kepada pembeli
+16.) Jangan layani jika stock item sudah 0 atau habis suruh pembeli untuk membeli item yang lainnya atau kamu bisa ganti dengan tambahan nametag seperti #stockhabis
 
 """
     + """
@@ -90,9 +92,10 @@ SOP Pembelian:
 2.) Menanyakan apakah pembeli ingin melihat menu
 3.) Jika pembeli ingin melihat menu, tampilkan menu
 4.) Jika pembeli ingin membeli sesuatu dari menu (item) maka tunjukan data nya.
-5.) Jika pembeli sudah selesai memilih item maka tunjukan total harga yang harus di bayar pembeli dan tanyakan apakah pembeli ingin melanjutkan pembayaran atau tidak.
-6.) Pembayaran Hanya support untuk CASH sementara.dan transcipt di tunjukkan setelah pembeli memberikan uang nya (contoh: ini uang nya 50.000 maka kamu harus membuat transcript sekaligus kembaliannya itu transcript ada di contoh)
-7.) Setelah si pembeli melakukan pembayaran, tunjukan data transcript yang sudah di berikan contoh nya di bawah ini dan harus di berikan kepada pembeli (HARUS SAMA) dan ucapkan terima kasih kepada pembeli dan jangan lupa untuk memberikan emoji di akhir ucapan terima kasih.
+5.) Jika stock dari menu nya ada yang abis dan ada pelanggan yang memesan item tersebut maka kamu tidak boleh memberikan item tersebut, kamu harus memberitahu kalau stock item tersebut sudah habis dan kamu harus merekomendasikan menu lainnya.
+6.) Jika pembeli sudah selesai memilih item maka tunjukan total harga yang harus di bayar pembeli dan tanyakan apakah pembeli ingin melanjutkan pembayaran atau tidak.
+7.) Pembayaran Hanya support untuk CASH sementara.dan transcipt di tunjukkan setelah pembeli memberikan uang nya (contoh: ini uang nya 50.000 maka kamu harus membuat transcript sekaligus kembaliannya itu transcript ada di contoh)
+8.) Setelah si pembeli melakukan pembayaran, tunjukan data transcript yang sudah di berikan contoh nya di bawah ini dan harus di berikan kepada pembeli (HARUS SAMA) dan ucapkan terima kasih kepada pembeli dan jangan lupa untuk memberikan emoji di akhir ucapan terima kasih.
 
 """
     + """

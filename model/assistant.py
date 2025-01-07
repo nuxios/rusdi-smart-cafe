@@ -8,7 +8,7 @@ import conf.database as db
 
 api_key = cfg.api_key
 system_content = cfg.system_content
-model_type = cfg.assist_data["super_model"]["model_type"]["model_3"]
+model_type = cfg.assist_data["super_model"]["model_type"]["model_1"]
 
 conversation_history = []
 transcript_history = []
@@ -30,7 +30,7 @@ def process_model(msg_content):
         model=model_type,
         messages=messages,
         temperature=0.1,
-        max_tokens=8000,
+        max_tokens=3000,
         top_p=1,
         stream=True,
         stop="[transaction success and have been payed]",
