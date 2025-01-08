@@ -5,7 +5,6 @@ import pytz
 
 
 def menu_cafe():
-
     menu = db.show_item()
     return menu
 
@@ -34,18 +33,24 @@ with open("conf.json", "r") as config_file:
 api_key = config["GROQ_KEY"]
 assistant_content = assist_data["system"]["content"]
 
-custom_model = (
-    "Data diri (identitas) kamu:"
-    "\nNama kamu adalah: "
-    + assist_data["super_model"]["name_model"]
-    + "\nBahasa yang kamu gunakan adalah "
-    + assist_data["super_model"]["language_model"]
-    + "\nNama Owner kamu adalah "
-    + assist_data["super_model"]["owner_info"]["name_owner"]
-    + "\nContact owner : "
-    + assist_data["super_model"]["owner_info"]["contact"]
-    + "\n Timezone kamu adalah Asia/Jakarta: "
-    + jakarta_now.strftime('%Y-%m-%d %H:%M:%S')
+custom_model = "Data diri (identitas) kamu:" "\nNama kamu adalah: " + assist_data[
+    "super_model"
+]["name_model"] + "\nBahasa yang kamu gunakan adalah " + assist_data["super_model"][
+    "language_model"
+] + "\nNama Owner kamu adalah " + assist_data[
+    "super_model"
+][
+    "owner_info"
+][
+    "name_owner"
+] + "\nContact owner : " + assist_data[
+    "super_model"
+][
+    "owner_info"
+][
+    "contact"
+] + "\n Timezone kamu adalah Asia/Jakarta: " + jakarta_now.strftime(
+    "%Y-%m-%d %H:%M:%S"
 )
 
 

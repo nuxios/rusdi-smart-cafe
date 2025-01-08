@@ -13,11 +13,13 @@ model_type = cfg.assist_data["super_model"]["model_type"]["model_1"]
 conversation_history = []
 transcript_history = []
 
+
 def clear_terminal():
     if platform.system() == "Windows":
         os.system("cls")
     else:
         os.system("clear")
+
 
 def process_model(msg_content):
     global conversation_history
@@ -37,6 +39,7 @@ def process_model(msg_content):
     )
     return completion
 
+
 def response_assistant(msg_content):
     global transcript_history
     completion = process_model(msg_content)
@@ -53,10 +56,10 @@ def response_assistant(msg_content):
 
         print("=== TRANSCRIPT RUSDI SMART CAFE ===")
         dataitem = []
-        
+
         for transcript in transcript_history:
             print(transcript)
-            
+
             # Menangkap semua item_id, quantity, dan total_price
             item_id_match = re.findall(r"item_id:\s*([\w-]+)", transcript)
             quantity_match = re.findall(r"quantity:\s*(\d+)", transcript)
@@ -88,7 +91,9 @@ def response_assistant(msg_content):
 
         # Simpan transaksi ke database
         for item in dataitem:
-            db.insert_transaction(item["item_id"], item["quantity"], item["total_price"])
+            db.insert_transaction(
+                item["item_id"], item["quantity"], item["total_price"]
+            )
 
         current_process = psutil.Process(os.getpid())
         current_process.terminate()
@@ -100,6 +105,7 @@ def response_assistant(msg_content):
     conversation_history.append({"role": "assistant", "content": response_text})
 
     return response_text
+
 
 def msg_data(msg_content):
     process_model(msg_content)
