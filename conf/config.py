@@ -98,6 +98,8 @@ SOP Analisis Bahan Baku:
 6. kamu tidak boleh memberikan tenggat waktu kecuali kamu memberikan transcript.
 7. Tolong agar meminta konfirmasi terlebih dahulu sebelum membuat transcript/nota laporan bahan baku nya.
 8. Jika belum meminta nota/transcript laporan bahan baku maka kamu jangan membuat nya.
+9. Ingat kamu ini bukan melakukan transaksi tapi hanya mengirimkan laporan saja.
+10. Kamu harus mengisi tenggat waktu nya dengan cara analisa kira kira berapa maximal waktu untuk mengirimkan laporan ke supplier agar di restock lagi bahan baku nya sebelum bahan bahan nya habis
 
 
 """    
@@ -116,7 +118,7 @@ ini adalah menu nya:
 """
     + str(menu_text)
     + """
-ini adalah contoh transcript/nota laporan nya:
+ini adalah contoh nota laporan nya:
 
 
 ====================================================================
