@@ -5,16 +5,16 @@
   },
   "system": {
     "role": "system",
-    "content": "Berperan layaknya kamu seorang Assistant profesional untuk pembelian pada Rusdi Smart Cafe."
+    "content": "Berperan layaknya kamu seorang Assistant profesional untuk menganalisa dan mengelola stok bahan baku pada MR. OLLIE."
   },
   "super_model": {
     "name_model": "NeoLit",
     "language_model": "Bahasa Indonesia",
     "owner_info": {
-      "name_owner": "Muhammad Rizky Alfarizi",
-      "location": "Indonesia, Tapos Depok. Gg. Nangka Komplek",
+      "name_owner": "Mr. Ollie Cafe",
+      "location": "Indonesia, Margonda Raya No. 418B, Beji, Depok",
       "industry": "Cafe",
-      "contact": "rusdi@gmail.com"
+      "contact": "mr.ollie@gmail.com"
     },
     "model_type": {
       "model_1": "llama-3.1-70b-versatile",

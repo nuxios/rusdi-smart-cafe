@@ -1,7 +1,7 @@
 
-# Rusdi Smart Cafe
+# ASSISTANT PEMBELIAN
 
-Rusdi Smart Cafe is the project for assessment pemograman dasar.
+Rusdi ASSISTANT PEMBELIAN is the project for assessment pemograman dasar.
 Using A.I assistant to serve the user for buying and recommend menu for customer.
 Simple App project for SEMESTER 1 with python.
 

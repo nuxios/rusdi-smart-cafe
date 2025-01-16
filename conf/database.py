@@ -54,8 +54,17 @@ def show_item():
 
     return response.data
 
+
+def show_raw_materials():
+    supabase = DB_connect()
+    response = supabase.table("raw_materials").select("*").execute()
+
+    return response.data
+
+
 import datetime
 from collections import defaultdict
+
 
 def show_item():
     # Mendapatkan data dari tabel items
@@ -63,11 +72,13 @@ def show_item():
     response = supabase.table("items").select("*").execute()
     return response.data
 
+
 def get_transactions():
     # Mendapatkan data transaksi dari tabel transactions
     supabase = DB_connect()
     response = supabase.table("transactions").select("*").execute()
     return response.data
+
 
 # def generate_recommendations():
 #     # Mendapatkan semua data item

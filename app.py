@@ -1,6 +1,6 @@
 import os
 import platform
-import model.assistant as ai
+import model.as_test as ai
 
 
 def clear_terminal():
@@ -13,20 +13,20 @@ def clear_terminal():
 
 clear_terminal()
 
-print("Selamat datang di Rusdi Smart Cafe Assistant!")
+print("Selamat datang di ASSISTANT PEMBELIAN!")
 print("Ketik 'exit' untuk keluar dari percakapan.\n")
 
 
 def main():
 
+    # print(ai.system_content)
     while True:
         msg_content = input("\n\nYou: ")
-
         if msg_content.lower() == "exit":
             print(
-                "Terima kasih telah menggunakan Rusdi Smart Cafe Assistant. Sampai jumpa!"
+                "Terima kasih telah menggunakan ASSISTANT PEMBELIAN. Sampai jumpa!"
             )
-            break
+            break  
 
         ai.msg_data(msg_content)
 
